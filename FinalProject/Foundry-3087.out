@@ -1,0 +1,10 @@
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   compute-14-41
+  Local device: mlx5_2
+--------------------------------------------------------------------------
+Processor 0: Word Count of the: 1410588
+Global Word Map Count Total: 1410588
+Total Time Taken: 20.8544
+[1588780514.905545] [compute-14-41:62023:0]          mpool.c:43   UCX  WARN  object 0x7f6fdbfdefc0 was not returned to mpool ucp_am_bufs

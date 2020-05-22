@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -J MatthewMapReduce 
+#SBATCH --ntasks=1
+#SBATCH --nodes=1
+#SBATCH --time=0-00:5:00 
+#SBATCH --mail-type=begin,end,fail,requeue 
+#SBATCH --export=all 
+#SBATCH --out=Foundry-%j.out
+ 
+# %j will substitute to the job's id
+#now run your executables just like you would in a shell script, Slurm will set the working directory as the directory the job was submitted from. 
+#e.g. if you submitted from /home/blspcy/softwaretesting your job would run in that directory.
+
+module load openmpi/4.0.3/gnu/9.2.0 
+mpicxx -o program main.cpp
+mpirun -np 1 ./program
